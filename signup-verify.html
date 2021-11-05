@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="/Users/hznnx/Documents/workspace/winter/aws-cognito-sdk.min.js"></script>
+    <script src="/Users/hznnx/Documents/workspace/winter/amazon-cognito-identity.min.js"></script>
+    <!-- AWS SDK for Javascript -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1021.0.min.js"></script>
+    <!-- 회원가입, 인증 관련 함수를 작성할 js 파일 -->
+    <script src="/Users/hznnx/Documents/workspace/winter/app.js"></script>
+
+  </head>
+  <body>
+
+    <!-- 회원가입을 위한 부분입니다. -->
+    <div>
+        <h1>Cognito Sign up</h1>
+        Email : <input id="signup_username" type="text" size="20" placeholder="Username"><br>
+        Password : <input id="signup_pwd" type="password" size="20" placeholder="Password"><br>
+        <input type="button" value="Sign up" id="signUp">
+    </div>
+
+    <!-- 인증을 위한 부분입니다. -->
+    <div>
+    <h1>Verify Your Email</h1>
+    Verification code : <input type="text" id="activate_code" placeholder="Verification Code"><br>
+    <input type="button" value="Verify" id="verify"><br>
+    <input type="submit" onClick="location.href='/Users/hznnx/Documents/workspace/winter/signIn-album.html'" value="go to app">
+    </div>
+    <script>
+        function getHtml(template) {
+           return template.join('\n');
+        }
+     </script>
+
+  </body>
+</html>

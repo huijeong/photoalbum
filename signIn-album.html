@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <!--
+        AWS Cognito를 사용하려면 아래 2개의 라이브러리가 필요합니다.
+        자세한 사항은 https://walkinpcm.blogspot.kr/2017/05/aws-aws-cognito.html 를 참고해주세요.
+     -->
+    <script src="/Users/hznnx/Documents/workspace/winter/aws-cognito-sdk.min.js"></script>
+    <script src="/Users/hznnx/Documents/workspace/winter/amazon-cognito-identity.min.js"></script>
+
+    <!-- AWS SDK for Javascript -->
+    <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1021.0.min.js"></script>
+
+    <!-- 로그인, 앨범 관련 함수를 작성할 js 파일 -->
+    <script src="/Users/hznnx/Documents/workspace/winter/album.js"></script>
+
+  </head>
+  <body>
+    <!-- 로그인을 위한 부분입니다. -->
+    <div>
+      <h1>Cognito Sign in</h1>
+      Email : <input id="signin_username" type="text" size="20" placeholder="Username"><br>
+      Password : <input id="signin_pwd" type="password" size="20" placeholder="Password"><br>
+      <input type="button" id="signin" value="Sign in">
+    </div>
+
+    <script>
+        function getHtml(template) {
+           return template.join('\n');
+        }
+     </script>
+
+    <h1>My Photo Albums App</h1>
+    <!-- app div 내부에 함수들의 실행 결과가 출력될 것입니다. -->
+    <div id="app"></div>
+  </body>
+</html>
