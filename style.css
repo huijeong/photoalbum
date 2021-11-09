@@ -1,0 +1,73 @@
+*{
+    font-family: 'Cuprum', sans-serif;
+    margin: 10px;
+    background-color: lightyellow;
+}
+.join, .check {
+    width : 500px;
+    margin: 0 auto;
+    text-align: center;
+    background-color: white;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+#title1 {
+    background-color: white;
+}
+
+#title2 {
+    background-color: white;
+    padding-top : 20px;
+    padding-bottom: 20px;
+}
+
+.check {
+    margin-top: 50px;
+}
+
+#signUp, #verify {
+    width: 70px;
+    height: 28px;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, rgb(250, 193, 202), rgb(250, 168, 181));
+    background-color: rgb(250, 193, 202);
+    color: black;
+    border: 2px solid white;
+    border-radius: 4px;
+}
+#goBtn {
+    width : 180px;
+    height: 35px;
+    box-shadow:inset 0px 1px 0px 0px #ffffff;
+    background: linear-gradient(to bottom, rgb(213, 233, 240), rgb(128, 203, 228));
+    background-color: lightblue;
+    color: black;
+    font-size: 16px;
+    border: 2px solid white;
+    border-radius: 4px;
+    margin-top: 25px;
+}
+#signUp:hover, #verify:hover {
+    background: linear-gradient(to bottom, rgb(250, 168, 181), rgb(250, 193, 202));
+    background-color: lightpink;
+}
+
+#goBtn:hover {
+    background: linear-gradient(to bottom, rgb(127, 205, 231) rgb(211, 234, 243));
+    background-color: lightblue;
+}
+
+input[type=text]{
+    width: 130px;
+    border : solid 1.5px;
+    border-radius: 4px;
+    border-color: black;
+    background-color: white;
+}
+input[type=password]{
+    width: 130px;
+    border : solid 1.5px;
+    border-radius: 4px;
+    border-color: black;
+    background-color: white;
+}

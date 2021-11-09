@@ -2,9 +2,7 @@ var CognitoConfig = {
     regionInfo : 'ap-northeast-2',
     userPoolId : 'ap-northeast-2_kkzJui2so',
     appClientId : 'i01nos3pphphhvs9vatanl9qb',  
-    // 위의 userpool에서 생성한 app client id를 입력하시면 됩니다.
     identityPoolId : 'ap-northeast-2:df1d9fae-0cb4-4356-8704-96db9c3ded18'
-    // 위의 userpool을 이용해서 생성한 federated identity pool의 id를 입력하시면 됩니다.
 };
 
 // 사용할 User Pool의 정보를 저장

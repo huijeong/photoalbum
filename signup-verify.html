@@ -1,36 +1,34 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <script src="/Users/hznnx/Documents/workspace/winter/aws-cognito-sdk.min.js"></script>
-    <script src="/Users/hznnx/Documents/workspace/winter/amazon-cognito-identity.min.js"></script>
+    <script src="/Users/hznnx/Documents/workspace/winter/dist/aws-cognito-sdk.min.js"></script>
+    <script src="/Users/hznnx/Documents/workspace/winter/dist/amazon-cognito-identity.min.js"></script>
     <!-- AWS SDK for Javascript -->
     <script src="https://sdk.amazonaws.com/js/aws-sdk-2.1021.0.min.js"></script>
     <!-- 회원가입, 인증 관련 함수를 작성할 js 파일 -->
-    <script src="/Users/hznnx/Documents/workspace/winter/app.js"></script>
-
+    <script src="/Users/hznnx/Documents/workspace/winter/main.js"></script>
+    <link rel="stylesheet" href="style.css">
   </head>
   <body>
-
     <!-- 회원가입을 위한 부분입니다. -->
-    <div>
-        <h1>Cognito Sign up</h1>
+    <div class = "join">
+        <img src = "dongobi.jpg" width="280px" height="200px">
+        <h1 id="title1">Dongobi cloud Sign up</h1>
         Email : <input id="signup_username" type="text" size="20" placeholder="Username"><br>
         Password : <input id="signup_pwd" type="password" size="20" placeholder="Password"><br>
-        <input type="button" value="Sign up" id="signUp">
+        <input type="button" id="signUp" value="Sign up" onclick="send()">
     </div>
-
     <!-- 인증을 위한 부분입니다. -->
-    <div>
-    <h1>Verify Your Email</h1>
-    Verification code : <input type="text" id="activate_code" placeholder="Verification Code"><br>
-    <input type="button" value="Verify" id="verify"><br>
-    <input type="submit" onClick="location.href='/Users/hznnx/Documents/workspace/winter/signIn-album.html'" value="go to app">
+    <div class = "check"> 
+        <h1 id="title2">Verify Your Email</h1>
+        Verification code : <input type="text" id="activate_code" placeholder="Verification Code"> 
+        <input type="button" id="verify" value="Verify" onclick="sucess()"><br>
+        <input type="submit" id="goBtn" onClick="location.href='/Users/hznnx/Documents/workspace/winter/signIn-album.html'" value="Go to Photo Album!">
     </div>
     <script>
-        function getHtml(template) {
-           return template.join('\n');
-        }
-     </script>
-
+        function getHtml(template) { return template.join('\n'); }
+        function send() { alert("입력하신 메일 주소로 인증코드가 발송되었습니다.") }
+        function sucess() { alert("인증 성공! 가입이 완료되었습니다.😄") }
+    </script>
   </body>
 </html>
