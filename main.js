@@ -13,7 +13,7 @@ var poolData = {
 
 // 입력한 User Pool 정보를 가지고 실제 User Pool에 접근할 수 있는 객체 생성
 var userPool = new AWSCognito.CognitoIdentityServiceProvider.CognitoUserPool(poolData);
-var cognitoUser;  // 로그인 성공시 로그인 한 사용자의 정보를 반환받는 변수
+var cognitoUser;  // 로그인 성공시 로그인 한 사용자의 정보 저장할 변수 선언
 
 // AWS.config에 리전 정보 설정
 AWS.config.update({
@@ -73,8 +73,7 @@ window.onload = function() {
         var user_activatecode = document.getElementById("activate_code").value;
     
         // cognitoUser는 가입함수에서 가입 성공 후 되돌아온 사용자 정보가 담겨있습니다.
-        // 이 변수에서 바로 confirmRegistration함수를 수행하면 AWS Cognito로 인증 요청을 합니다.
-        // 인자는 인증코드, true(이것도 알아봐야합니다..ㅎㅎ), callback 함수 입니다.
+        // confirmRegistration함수를 수행하면 AWS Cognito로 인증 요청
         cognitoUser.confirmRegistration(user_activatecode, true, function(err, result){
         if(err) {
             alert(err);

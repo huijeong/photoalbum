@@ -205,7 +205,7 @@ function viewAlbum(albumName) {
     });
 }
 
-//앨범에 사진 추가
+//앨범에 사진 추가하기
 function addPhoto(albumName) {
     var files = document.getElementById("photoupload").files;
     if (!files.length) {
@@ -245,7 +245,7 @@ function deletePhoto(albumName, photoKey) {
       if (err) {
         return alert("There was an error deleting your photo: ", err.message);
       }
-      alert("Successfully deleted photo.");
+      alert("Successfully deleted photo.(삭제 성공)");
       viewAlbum(albumName);
     });
 }
@@ -255,7 +255,7 @@ function deleteAlbum(albumName) {
     var albumKey = encodeURIComponent(albumName) + "/";
     s3.listObjects({ Prefix: albumKey }, function(err, data) {
       if (err) {
-        return alert("There was an error deleting your album: ", err.message);
+        return alert("(오류발생)There was an error deleting your album: ", err.message);
       }
       var objects = data.Contents.map(function(object) {
         return { Key: object.Key };
