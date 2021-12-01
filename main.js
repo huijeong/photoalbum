@@ -51,11 +51,11 @@ window.onload = function() {
         // 전역변수로 만들어 놓은 User Pool 객체에서는 signup 함수를 제공합니다.
         // 인자는 User name(ID 인것 같네요.), Password, Attribute List, null, 처리 결과가 오면 수행 될 callback 함수 입니다.
         userPool.signUp(user_Email,user_Pw, attributeList, null, function(err, result) {
-        if(err) {
-            // error가 발생하면 여기로 빠집니다.
-            alert(err);
-            return;
-        }
+            if(err) {
+                // error가 발생하면 여기로 빠집니다.
+                alert(err);
+                return;
+            }
     
         // 가입이 성공하면 result에 가입된 User의 정보가 되돌아 옵니다.
         // 인증 함수에서 사용해야하기에 위에서 만든 전역변수인 cognitoUser에 넣어놓습니다.
